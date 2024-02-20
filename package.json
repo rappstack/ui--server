@@ -1,0 +1,47 @@
+{
+	"name": "@rappstack/ui--server",
+	"type": "module",
+	"version": "0.0.0",
+	"description": "UI library targeting the server",
+	"keywords": [
+		"rappstack",
+		"reactive",
+		"full-stack",
+		"ui",
+		"server",
+		"rss"
+	],
+	"homepage": "https://github.com/rappstack/ui--server",
+	"bugs": {
+		"url": "https://github.com/rappstack/ui--server/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rappstack/ui--server.git"
+	},
+	"license": "Apache-2.0",
+	"author": "Brian Takita",
+	"types": "index.ts",
+	"exports": {
+		".": "./index.ts",
+		"./rss": "./rss/index.ts",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"*.d.ts",
+		"*.js",
+		"*.json",
+		"rss"
+	],
+	"dependencies": {
+		"ctx-core": "^6.4.3",
+		"relementjs": "^0.73.3",
+		"relysjs": "^1.14.6"
+	},
+	"devDependencies": {
+		"bun-types": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.3.3"
+	}
+}
