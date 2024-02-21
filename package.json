@@ -9,7 +9,8 @@
 		"full-stack",
 		"ui",
 		"server",
-		"rss"
+		"rss",
+		"sitemap"
 	],
 	"homepage": "https://github.com/rappstack/ui--server",
 	"bugs": {
@@ -24,14 +25,18 @@
 	"types": "index.ts",
 	"exports": {
 		".": "./index.ts",
+		"./doc": "./doc/index.ts",
 		"./rss": "./rss/index.ts",
+		"./sitemap": "./sitemap/index.ts",
 		"./package.json": "./package.json"
 	},
 	"files": [
 		"*.d.ts",
 		"*.js",
 		"*.json",
-		"rss"
+		"doc",
+		"rss",
+		"sitemap"
 	],
 	"dependencies": {
 		"ctx-core": "^6.4.4",

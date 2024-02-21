@@ -1,5 +1,6 @@
 import type { Node_T, relement_env_T, tag_dom_T } from 'relementjs'
 import type { tag_props_T } from 'relementjs/any'
+// @formatter:off
 export declare function author_<env_T extends relement_env_T>(...arg_a:arg_a_T<'author'>):ret_T<env_T, 'author'>
 export declare function category_<env_T extends relement_env_T>(...arg_a:arg_a_T<'category'>):ret_T<env_T, 'category'>
 export declare function channel_<env_T extends relement_env_T>(...arg_a:arg_a_T<'channel'>):ret_T<env_T, 'channel'>
@@ -25,44 +26,36 @@ export declare function title_<env_T extends relement_env_T>(...arg_a:arg_a_T<'t
 export declare function ttl_<env_T extends relement_env_T>(...arg_a:arg_a_T<'ttl'>):ret_T<env_T, 'ttl'>
 export declare function webMaster_<env_T extends relement_env_T>(...arg_a:arg_a_T<'webMaster'>):ret_T<env_T, 'webMaster'>
 export interface RssElementTagNameMap {
-	'author':RssChannelElement
-	'category':RssChannelElement
-	'channel':RssChannelElement
-	'cloud':RssChannelElement
-	'copyright':RssChannelElement
-	'description':RssTextElement
-	'docs':RssTextElement
-	'generator':RssItemElement
-	'guid':RssItemElement
-	'image':RssItemElement
-	'item':RssItemElement
-	'lastBuildDate':RssItemElement
-	'language':RssTextElement
-	'link':RssTextElement
-	'managingEditor':RssTextElement
-	'pubDate':RssTextElement
-	'rating':RssElement
-	'rss':RssElement
-	'skipDays':RssElement
-	'skipHours':RssElement
-	'textInput':RssTextElement
-	'title':RssTextElement
-	'ttl':RssTextElement
-	'webMaster':RssTextElement
+	author:RssChannelElement
+	category:RssChannelElement
+	channel:RssChannelElement
+	cloud:RssChannelElement
+	copyright:RssChannelElement
+	description:RssTextElement
+	docs:RssTextElement
+	generator:RssItemElement
+	guid:RssItemElement
+	image:RssItemElement
+	item:RssItemElement
+	lastBuildDate:RssItemElement
+	language:RssTextElement
+	link:RssTextElement
+	managingEditor:RssTextElement
+	pubDate:RssTextElement
+	rating:RssElement
+	rss:RssElement
+	skipDays:RssElement
+	skipHours:RssElement
+	textInput:RssTextElement
+	title:RssTextElement
+	ttl:RssTextElement
+	webMaster:RssTextElement
 }
-export interface RssElement {
-	// Definitions for RSS element properties here...
-}
-export interface RssChannelElement {
-	// Definitions for Channel element properties here...
-}
-export interface RssItemElement {
-	// Definitions for Item element properties here...
-}
-export interface RssTextElement {
-	// Text element would typically have a text property
-	text:string
-}
+export interface RssElement extends Node {}
+export interface RssChannelElement extends RssElement {}
+export interface RssItemElement extends RssElement {}
+export interface RssTextElement extends RssElement {}
+// @formatter:on
 type arg_a_T<tag_name_T extends keyof RssElementTagNameMap> =
 	|[]
 	|[tag_props_T<RssElementTagNameMap[tag_name_T]>, ...tag_dom_T<'any'>[]]
