@@ -1,4 +1,4 @@
-import { ns_id_be_memo_pair_ } from 'ctx-core/all'
+import { ns_id_be_memo_pair_ } from 'ctx-core/rmemo'
 import { request_url_ } from 'relysjs/server'
 export const [
 	,
