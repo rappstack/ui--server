@@ -43,7 +43,7 @@
 	"dependencies": {
 		"ctx-core": "^6.5.3",
 		"relementjs": "^0.74.3",
-		"relysjs": "^1.14.16"
+		"relysjs": "^1.14.17"
 	},
 	"devDependencies": {
 		"bun-types": "latest"
