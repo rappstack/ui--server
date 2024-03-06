@@ -26,6 +26,7 @@
 	"exports": {
 		".": "./index.ts",
 		"./doc": "./doc/index.ts",
+		"./ld_json": "./ld_json/index.ts",
 		"./request": "./request/index.ts",
 		"./rss": "./rss/index.ts",
 		"./sitemap": "./sitemap/index.ts",
@@ -36,6 +37,7 @@
 		"*.js",
 		"*.json",
 		"doc",
+		"ld_json",
 		"request",
 		"rss",
 		"sitemap"
@@ -46,7 +48,8 @@
 		"relysjs": "^1.16.1"
 	},
 	"devDependencies": {
-		"bun-types": "latest"
+		"bun-types": "latest",
+		"schema-dts": "^1.1.2"
 	},
 	"peerDependencies": {
 		"typescript": "^5.4.2"
