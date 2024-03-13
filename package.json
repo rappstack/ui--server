@@ -28,7 +28,6 @@
 		"./doc": "./doc/index.ts",
 		"./jsonld": "./jsonld/index.ts",
 		"./rdfa": "./rdfa/index.ts",
-		"./request": "./request/index.ts",
 		"./rss": "./rss/index.ts",
 		"./sitemap": "./sitemap/index.ts",
 		"./package.json": "./package.json"
@@ -40,7 +39,6 @@
 		"doc",
 		"jsonld",
 		"rdfa",
-		"request",
 		"rss",
 		"sitemap"
 	],
