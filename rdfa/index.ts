@@ -1,4 +1,4 @@
-import type { Article, Thing } from '@btakita/schema-dts'
+import type { Article, Thing } from 'schema-dts'
 import { WebPage_id_ } from '@rappstack/domain--server/jsonld'
 import { Article_id_, type schema_org_props_rdfa_T } from '@rappstack/domain--server/rdfa'
 import { link_ } from 'relementjs/html'
