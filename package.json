@@ -45,9 +45,9 @@
 		"sitemap"
 	],
 	"dependencies": {
-		"ctx-core": "^6.6.2",
-		"relementjs": "^0.75.5",
-		"relysjs": "^1.17.7"
+		"ctx-core": "^6.7.0",
+		"relementjs": "^0.76.0",
+		"relysjs": "^1.18.0"
 	},
 	"devDependencies": {
 		"bun-types": "latest",
