@@ -6,7 +6,7 @@ export function fouc__remove__fragment_($p:fouc__remove__fragment_props_T) {
 	return [
 		style_({ type: 'text/css' }, raw_(
 			// language=css
-			`body{background-color:rgb(${light_bg_color});}@media(prefers-color-scheme:dark){body{background-color:rgb(${dark_bg_color});}}`
+			`html{background-color:rgb(${light_bg_color});}@media(prefers-color-scheme:dark){body{background-color:rgb(${dark_bg_color});}}`
 		)),
 		script_({ type: 'module' }, raw_(
 			// remove fouc
