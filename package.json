@@ -26,6 +26,7 @@
 	"exports": {
 		".": "./index.ts",
 		"./doc": "./doc/index.ts",
+		"./fouc": "./fouc/index.ts",
 		"./jsonld": "./jsonld/index.ts",
 		"./rdfa": "./rdfa/index.ts",
 		"./rss": "./rss/index.ts",
@@ -37,6 +38,7 @@
 		"*.js",
 		"*.json",
 		"doc",
+		"fouc",
 		"jsonld",
 		"rdfa",
 		"rss",
