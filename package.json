@@ -28,9 +28,12 @@
 		"./doc": "./doc/index.ts",
 		"./fouc": "./fouc/index.ts",
 		"./jsonld": "./jsonld/index.ts",
+		"./meta": "./meta/index.ts",
+		"./og": "./og/index.ts",
 		"./rdfa": "./rdfa/index.ts",
 		"./rss": "./rss/index.ts",
 		"./sitemap": "./sitemap/index.ts",
+		"./twitter": "./twitter/index.ts",
 		"./package.json": "./package.json"
 	},
 	"files": [
@@ -40,13 +43,16 @@
 		"doc",
 		"fouc",
 		"jsonld",
+		"meta",
+		"og",
 		"rdfa",
 		"rss",
-		"sitemap"
+		"sitemap",
+		"twitter"
 	],
 	"dependencies": {
 		"ctx-core": "^6.7.0",
-		"relementjs": "^0.76.0",
+		"relementjs": "^0.77.0",
 		"relysjs": "^1.18.0"
 	},
 	"devDependencies": {
