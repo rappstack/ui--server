@@ -1,3 +1,4 @@
+/** @see {https://ogp.me/} */
 /** @see {https://github.com/bradgarropy/next-seo/blob/master/src/components/Facebook/Facebook.tsx} */
 import { type og_type_T } from '@rappstack/domain--server/og'
 import { type tag_dom_T } from 'relementjs'

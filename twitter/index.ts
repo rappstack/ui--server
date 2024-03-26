@@ -1,3 +1,4 @@
+/** @see {https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started} */
 /** @see {https://github.com/bradgarropy/next-seo/blob/master/src/components/Twitter/Twitter.tsx} */
 import { type twitter_card_type_T } from '@rappstack/domain--server/twitter'
 import { maybe__meta_ } from '../meta/index.js'
