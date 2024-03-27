@@ -11,7 +11,7 @@ export function fouc__remove__fragment_($p:fouc__remove__fragment_props_T) {
 		script_({ type: 'module' }, raw_(
 			// remove fouc
 			/// language=js
-			`let t=localStorage.getItem('theme')??window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';let h=document.firstElementChild;h.setAttribute('data-theme',t);h.style.backgroundColor='rgb('+(t==='dark'?'${dark_bg_color}':'${light_bg_color}')+')';setTimeout(()=>h.style.backgroundColor='',${reset_timeout})`
+			`let t=localStorage.getItem('theme')??window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';let h=document.firstElementChild;h.classList.add(t);h.setAttribute('data-theme',t);h.style.backgroundColor='rgb('+(t==='dark'?'${dark_bg_color}':'${light_bg_color}')+')';setTimeout(()=>h.style.backgroundColor='',${reset_timeout})`
 		))
 	]
 }
