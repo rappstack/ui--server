@@ -9,6 +9,7 @@ export function nofouc__theme__set__fragment_($p:nofouc__remove__fragment_props_
 	let { dark_bg_color, light_bg_color, reset_timeout } = $p
 	reset_timeout ??= 1000
 	return [
+		// @formatter:off
 		style_({ type: 'text/css' }, raw_(
 			// language=css
 			`html{background-color:rgb(${light_bg_color});}@media (prefers-color-scheme: dark){body{background-color:rgb(${dark_bg_color});}}html.nofouc .nofouc{opacity:0;}`
@@ -17,18 +18,25 @@ export function nofouc__theme__set__fragment_($p:nofouc__remove__fragment_props_
 			// remove fouc
 			// language=js
 			`let t=globalThis.__theme=localStorage.getItem('theme')??window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';let h=document.firstElementChild;h.classList.add(t);h.setAttribute('data-theme',t);h.style.backgroundColor='rgb('+(t==='dark'?'${dark_bg_color}':'${light_bg_color}')+')';setTimeout(()=>h.style.backgroundColor='',${reset_timeout});`
-		))
+		)),
+		// @formatter:on
 	]
 }
 type nofouc__body_bg__script_props_T = {
-	dark_bg_color:string
-	light_bg_color:string
-}
+	bg_color?:string
+	dark_bg_color?:string
+	light_bg_color?:string
+}&(
+	|{ bg_color:string }
+	|{ dark_bg_color:string, light_bg_color:string })
 export function nofouc__body_bg__script_($p:nofouc__body_bg__script_props_T) {
 	const {
+		bg_color,
 		dark_bg_color,
 		light_bg_color,
 	} = $p
+	// @formatter:off
 	return script_({ type: 'application/javascript' }, raw_(
-		`document.body.style.backgroundColor='rgb('+(globalThis.__theme==='dark'?'${dark_bg_color}':'${light_bg_color}')+')';setTimeout(()=>document.body.style.backgroundColor=undefined,1000)`))
+		`document.body.style.backgroundColor='rgb('+(globalThis.__theme==='dark'?'${dark_bg_color ?? bg_color}':'${light_bg_color ?? bg_color}')+')';setTimeout(()=>document.body.style.backgroundColor=undefined,1000)`))
+	// @formatter:on
 }
