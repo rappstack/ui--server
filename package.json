@@ -51,9 +51,9 @@
 		"twitter"
 	],
 	"dependencies": {
-		"ctx-core": "^7.0.0",
-		"relementjs": "^0.78.2",
-		"relysjs": "^1.19.2"
+		"ctx-core": "^7.0.1",
+		"relementjs": "^0.78.3",
+		"relysjs": "^1.19.3"
 	},
 	"devDependencies": {
 		"bun-types": "latest",
