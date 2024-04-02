@@ -6,7 +6,8 @@ type nofouc__remove__fragment_props_T = {
 	reset_timeout?:number
 }
 export function nofouc__theme__set__fragment_($p:nofouc__remove__fragment_props_T) {
-	let { dark_bg_color, light_bg_color, reset_timeout } = $p
+	const { dark_bg_color, light_bg_color } = $p
+	let { reset_timeout } = $p
 	reset_timeout ??= 1000
 	return [
 		// @formatter:off
