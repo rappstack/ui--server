@@ -28,6 +28,7 @@
 		"./doc": "./doc/index.ts",
 		"./fouc": "./fouc/index.ts",
 		"./jsonld": "./jsonld/index.ts",
+		"./md": "./md/index.ts",
 		"./meta": "./meta/index.ts",
 		"./og": "./og/index.ts",
 		"./rdfa": "./rdfa/index.ts",
@@ -43,6 +44,7 @@
 		"doc",
 		"fouc",
 		"jsonld",
+		"md",
 		"meta",
 		"og",
 		"rdfa",
@@ -52,6 +54,7 @@
 	],
 	"dependencies": {
 		"ctx-core": "^7.2.2",
+		"marked": "^12.0.2",
 		"relementjs": "^0.80.2",
 		"relysjs": "^1.21.8"
 	},
