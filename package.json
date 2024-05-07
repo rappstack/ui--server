@@ -53,10 +53,10 @@
 		"twitter"
 	],
 	"dependencies": {
-		"ctx-core": "^7.2.4",
+		"ctx-core": "^7.2.6",
 		"marked": "^12.0.2",
-		"relementjs": "^0.80.4",
-		"relysjs": "^1.21.21"
+		"relementjs": "^0.80.6",
+		"relysjs": "^1.21.23"
 	},
 	"devDependencies": {
 		"bun-types": "latest",
