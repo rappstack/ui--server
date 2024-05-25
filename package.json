@@ -25,6 +25,7 @@
 	"types": "index.ts",
 	"exports": {
 		".": "./index.ts",
+		"./css": "./css/index.ts",
 		"./doc": "./doc/index.ts",
 		"./fouc": "./fouc/index.ts",
 		"./jsonld": "./jsonld/index.ts",
@@ -41,6 +42,7 @@
 		"*.d.ts",
 		"*.js",
 		"*.json",
+		"css",
 		"doc",
 		"fouc",
 		"jsonld",
