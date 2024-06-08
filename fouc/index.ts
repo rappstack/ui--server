@@ -23,6 +23,10 @@ export function nofouc__theme__set__fragment_($p:nofouc__remove__fragment_props_
 		// @formatter:on
 	]
 }
+export function nofouc__body__script_() {
+	/** @see {https://stackoverflow.com/q/65442252/142571} */
+	return script_(0)
+}
 type nofouc__body_bg__script_props_T = {
 	bg_color?:string
 	dark_bg_color?:string
