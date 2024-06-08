@@ -18,7 +18,7 @@ export function nofouc__theme__set__fragment_($p:nofouc__remove__fragment_props_
 		script_(raw_(
 			// remove fouc
 			// language=js
-			`let t=globalThis.__theme=localStorage.getItem('theme')??window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';let h=document.firstElementChild;h.classList.add(t);h.setAttribute('data-color-scheme',t);h.style.backgroundColor='rgb('+(t==='dark'?'${dark_bg_color}':'${light_bg_color}')+')';setTimeout(()=>h.style.backgroundColor='',${reset_timeout});`
+			`let t=globalThis.__theme=localStorage.getItem('theme')??window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';let h=document.firstElementChild;h.classList.add(t);h.setAttribute('data-color-scheme',t);h.style.backgroundColor='rgb('+(t==='dark'?'${dark_bg_color}':'${light_bg_color}')+')';setTimeout(()=>{document.querySelector('html').classList.remove('nofouc');h.style.backgroundColor=''},${reset_timeout});`
 		)),
 		// @formatter:on
 	]
