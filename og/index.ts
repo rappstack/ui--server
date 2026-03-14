@@ -132,7 +132,7 @@ export function og_video_movie__meta_fragment_($p:og_video_movie_T) {
 	// video:duration - integer >=1 - The movie's length in seconds.
 	// video:release_date - datetime - The date the movie was released.
 	// video:tag - string array - Tag words associated with this movie.
-	let { actor_a1, director_a1, writer_a1, duration, release_date, tag_a1 } = $p
+	let { actor_a1, director_a1, writer_a1, duration, release_date, tags } = $p
 	return [
 		(actor_a1 ?? []).map(actor=>
 			og_profile__meta_fragment_({ ...actor, prefix: 'og:video:actor' })),
@@ -142,7 +142,7 @@ export function og_video_movie__meta_fragment_($p:og_video_movie_T) {
 			og_profile__meta_fragment_({ ...writer, prefix: 'og:video:writer' })),
 		maybe__meta_({ property: 'og:video:duration', content: duration }),
 		maybe__meta_({ property: 'og:video:release_date', content: release_date }),
-		(tag_a1 ?? []).map(tag=>maybe__meta_({ property: 'og:video:tag', content: tag })),
+		(tags ?? []).map(tag=>maybe__meta_({ property: 'og:video:tag', content: tag })),
 	]
 }
 export function og_video_episode__meta_fragment_($p:og_video_episode_T) {
@@ -161,7 +161,7 @@ export function og_video_other__meta_fragment_($p:og_video_tv_show_T) {
 	return og_video_movie__meta_fragment_($p)
 }
 export function og_article__meta_fragment_($p:og_article_T) {
-	const { published_time, modified_time, expiration_time, author_a1, section, tag_a1 } = $p
+	const { published_time, modified_time, expiration_time, author_a1, section, tags } = $p
 	return [
 		maybe__meta_({ property: 'og:article:published_time', content: published_time }),
 		maybe__meta_({ property: 'og:article:modified_time', content: modified_time }),
@@ -169,18 +169,18 @@ export function og_article__meta_fragment_($p:og_article_T) {
 		(author_a1 ?? []).map(author=>
 			og_profile__meta_fragment_({ ...author, prefix: 'og:article:author' })),
 		maybe__meta_({ property: 'og:article:section', content: section }),
-		(tag_a1 ?? []).map(tag=>
+		(tags ?? []).map(tag=>
 			maybe__meta_({ property: 'og:article:tag', content: tag })),
 	]
 }
 export function og_book__meta_fragment_($p:og_book_T) {
-	const { author_a1, isbn, release_date, tag_a1 } = $p
+	const { author_a1, isbn, release_date, tags } = $p
 	return [
 		(author_a1 ?? []).map(author=>
 			og_profile__meta_fragment_({ ...author, prefix: 'og:book:author' })),
 		maybe__meta_({ property: 'og:book:isbn', content: isbn }),
 		maybe__meta_({ property: 'og:book:release_date', content: release_date }),
-		(tag_a1 ?? []).map(tag=>
+		(tags ?? []).map(tag=>
 			maybe__meta_({ property: 'og:book:tag', content: tag })),
 	]
 }
@@ -291,7 +291,7 @@ export type og_video_movie_T = og_video_T&{
 	// video:release_date - datetime - The date the movie was released.
 	release_date?:string
 	// video:tag - string array - Tag words associated with this movie.
-	tag_a1?:string[]
+	tags?:string[]
 }
 export type og_video_episode_T = og_video_movie_T&{
 	series?:og_video_tv_show_T
@@ -323,11 +323,11 @@ export type og_article_T = {
 	// article:section - string - A high-level section name. E.g. Technology
 	section?:string
 	// article:tag - string array - Tag words associated with this article.
-	tag_a1?:string[]
+	tags?:string[]
 }
 export type og_book_T = {
 	author_a1?:og_profile_T[]
 	isbn?:string
 	release_date?:string
-	tag_a1?:string[]
+	tags?:string[]
 }
